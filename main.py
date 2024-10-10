@@ -1,8 +1,14 @@
-example = 'Топинамбур'
-print(example[0])
-print(example[-1])
-print(example[5:])
-print(example[::-1])
-print(example[1::2])
-mid_index = len(example)//2
-print(example[mid_index:])
+# 1st program
+print(9**0.5*5)
+# 2nd program
+print(9.99 > 9.98 and 1000 != 1000.1)
+# 3rd program
+print(2 * 2 + 2)
+print(2 * (2 + 2) )
+print((2 * 2 + 2) == (2 * (2 + 2) ))
+# 4th program
+a = "123.456"
+b = float(a)
+c = int(b * 10)
+d = c % 10
+print(d)
