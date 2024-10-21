@@ -8,12 +8,11 @@ a = 1
 for j in range(1, 20):
     b = 1
     for r in range(1, 20):
-        b += 1
-
         for z in range(len(w)):
             if a + b == w[z] and a != b and a < b:
                 result.append(a)
                 result.append(b)
+        b += 1
     a += 1
 print('Пароль: ', result)
 
