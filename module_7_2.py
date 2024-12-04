@@ -10,8 +10,9 @@ def custom_write(file_name, strings):
     for i in file:
         strings_positions[(n+1, cursor[n])] = i[0:-1]
         n += 1
+    file.close()
     return strings_positions
-    file.close
+
 
 info = ['Text for tell.', 'Используйте кодировку utf-8.', 'Because there are 2 languages!', 'Спасибо!']
 result = custom_write('test.txt', info)
