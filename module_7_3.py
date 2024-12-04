@@ -40,29 +40,3 @@ finder2 = WordsFinder('test_file.txt')
 print(finder2.get_all_words())
 print(finder2.find('TEXT'))
 print(finder2.count('teXT'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#     def qwe(self):
-#         for i in self.args:
-#             print(i)
-#
-#
-# qw = WordsFinder(123, 234, 345)
-#
-# qw.qwe()
-
