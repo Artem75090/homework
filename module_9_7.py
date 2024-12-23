@@ -1,14 +1,17 @@
 def is_prime(func):
     def wrapper(a, b, c):
-        counter = 0
+        is_prime = True
         res_sum_three = func(a, b, c)
-        for i in range(1, res_sum_three + 1):
+        for i in range(2, res_sum_three):
             if res_sum_three % i == 0:
-                counter += 1
-        if counter == 2:
-            return f"Простое \n{res_sum_three}"
+                is_prime = False
+                break
+        if is_prime:
+            print(f"Простое")
+            return res_sum_three
         else:
-            return f"Составное \n{res_sum_three}"
+            print(f"Составное")
+            return res_sum_three
 
     return wrapper
 
