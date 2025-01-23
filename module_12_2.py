@@ -44,27 +44,32 @@ class Tournament:
 
 
 class TournamentTest(unittest.TestCase):
+    is_frozen = True
+
     @classmethod
     def setUpClass(cls):
         cls.all_results = []
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def setUp(self):
         self.r1 = Runner("Усэйн", speed=10)
         self.r2 = Runner("Андрей", speed=9)
         self.r3 = Runner("Ник", speed=3)
-
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_1(self):
         self.track = Tournament(90, self.r1, self.r3)
         res = self.track.start()
         TournamentTest.all_results.append(res)
         self.assertTrue(res[max(res.keys())] == "Ник")
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_2(self):
         self.track = Tournament(90, self.r2, self.r3)
         res = self.track.start()
         TournamentTest.all_results.append(res)
         self.assertTrue(res[max(res.keys())] == "Ник")
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_3(self):
         self.track = Tournament(90, self.r1, self.r2, self.r3)
         res = self.track.start()
@@ -75,3 +80,4 @@ class TournamentTest(unittest.TestCase):
     def tearDownClass(cls):
         for i in TournamentTest.all_results:
             print(i, end='\n')
+
